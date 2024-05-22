@@ -9,10 +9,10 @@ const SearchBar = () => {
   const handleSearch = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault()
     const formData = new FormData(e.currentTarget)
-    const name = formData.get('name') as string // Исправлено: 'string' на string
+    const name = formData.get('name') as string 
 
     if (name) {
-      router.push(`/list?name=${name}`) // Обновлено: & на ?
+      router.push(`/list?name=${name}`) 
     }
   }
 
