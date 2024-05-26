@@ -21,7 +21,7 @@ const images = [
   },
 ]
 
-const ProductImages = ({ items }: { items: any }) => {
+const ProductImages = () => {
   const [index, setIndex] = useState(0);
 
   return (

@@ -1,5 +1,5 @@
 import Filter from '@/components/Filter'
-import ProductList from '@/components/productList'
+import ProductList from '@/components/ProductList'
 import Image from 'next/image'
 
 const ListPage = () => {
