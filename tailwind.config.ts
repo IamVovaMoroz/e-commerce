@@ -17,7 +17,7 @@ const config: Config = {
         lama: "#F35C7A",
       },
     },
-      },
+  },
   plugins: [],
 };
 export default config;

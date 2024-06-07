@@ -1,18 +1,8 @@
-'use client'
-import { Suspense, useContext, useEffect } from "react";
+"use client";
+
 import { WixClientContext } from "@/context/wixContext";
-
-
-
-
+import { useContext } from "react";
 
 export const useWixClient = () => {
-
-	return useContext(WixClientContext)
-
-
-
-	
-}
-
-
+  return useContext(WixClientContext);
+};

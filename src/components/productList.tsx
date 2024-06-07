@@ -16,6 +16,17 @@ const ProductList = async ({
   limit?: number;
   searchParams?: any;
 }) => {
+  // Логирование параметров
+  console.log("categoryId:", categoryId);
+  console.log("limit:", limit);
+  console.log("searchParams:", searchParams);
+
+  // Проверка обязательных параметров
+  if (!categoryId) {
+    console.error("Error: categoryId is required");
+    return <div>Error: categoryId is required</div>;
+  }
+
   const wixClient = await wixClientServer();
 
   const productQuery = wixClient.products
@@ -34,7 +45,6 @@ const ProductList = async ({
         ? parseInt(searchParams.page) * (limit || PRODUCT_PER_PAGE)
         : 0
     );
-  // .find();
 
   if (searchParams?.sort) {
     const [sortType, sortBy] = searchParams.sort.split(" ");
@@ -96,7 +106,6 @@ const ProductList = async ({
           </button>
         </Link>
       ))}
-	
       {searchParams?.cat || searchParams?.name ? (
         <Pagination
           currentPage={res.currentPage || 0}
