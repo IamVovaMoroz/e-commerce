@@ -16,12 +16,7 @@ const ProductList = async ({
   limit?: number;
   searchParams?: any;
 }) => {
-  // Логирование параметров
-  console.log("categoryId:", categoryId);
-  console.log("limit:", limit);
-  console.log("searchParams:", searchParams);
-
-  // Проверка обязательных параметров
+ 
   if (!categoryId) {
     console.error("Error: categoryId is required");
     return <div>Error: categoryId is required</div>;
