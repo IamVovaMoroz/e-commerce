@@ -16,7 +16,7 @@ const ProductList = async ({
   limit?: number;
   searchParams?: any;
 }) => {
- 
+
   if (!categoryId) {
     console.error("Error: categoryId is required");
     return <div>Error: categoryId is required</div>;
@@ -82,7 +82,14 @@ const ProductList = async ({
           </div>
           <div className="flex justify-between">
             <span className="font-medium">{product.name}</span>
-            <span className="font-semibold">${product.price?.price}</span>
+            <div className="flex items-center gap-4">
+              {product.price?.discountedPrice !== product.price?.price && (
+                <span className="text-gray-500 line-through">${product.price?.price}</span>
+              )}
+              <span className="font-semibold">
+                ${product.price?.discountedPrice}
+              </span>
+            </div>
           </div>
           {product.additionalInfoSections && (
             <div

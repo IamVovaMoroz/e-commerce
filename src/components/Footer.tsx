@@ -9,18 +9,24 @@ const Footer = () => {
         {/* LEFT */}
         <div className="w-full md:w-1/2 lg:w-1/4 flex flex-col gap-8">
           <Link href="/">
-            <div className="text-2xl tracking-wide">LAMA</div>
+            <div className="text-2xl tracking-wide">ESHOP</div>
           </Link>
           <p>
-            3252 Winding Way, Central Plaza, Willowbrook, CA 90210, United
-            States
+            Av. Antoine-Marie Mirany 23, 1225 Chêne-Bourg, Switzerland
           </p>
-          <span className="font-semibold">hello@lama.dev</span>
-          <span className="font-semibold">+1 234 567 890</span>
+          <span className="font-semibold">navigators.ua@gmail.com</span>
+          <span className="font-semibold">+41 79 233 84 63</span>
           <div className="flex gap-6">
-            <Image src="/facebook.png" alt="" width={16} height={16} />
-            <Image src="/instagram.png" alt="" width={16} height={16} />
-            <Image src="/youtube.png" alt="" width={16} height={16} />
+            <a href="https://www.facebook.com/volodymyr.moroz.83" target="_blank" rel="noopener noreferrer">
+              <Image src="/facebook.png" alt="Facebook" width={16} height={16} />
+            </a>
+            <a href="https://www.youtube.com/@volodymyrmoroz5046/videos" target="_blank" rel="noopener noreferrer">
+              <Image src="/youtube.png" alt="YouTube" width={16} height={16} />
+            </a>
+            <a href="https://www.linkedin.com/in/volodymyr-moroz1/" target="_blank" rel="noopener noreferrer">
+              <Image  src="/linkedin2.jpg" alt="" width={16} height={16} />
+            </a>
+            {/* <Image src="/linkedin2.jpg" alt="" width={16} height={16} /> */}
             <Image src="/pinterest.png" alt="" width={16} height={16} />
             <Image src="/x.png" alt="" width={16} height={16} />
           </div>
@@ -85,11 +91,11 @@ const Footer = () => {
       </div>
       {/* BOTTOM */}
       <div className="flex flex-col md:flex-row items-center justify-between gap-8 mt-16">
-        <div className="">© 2024 Lama Shop</div>
+        <div className="">© 2024 ESHOP</div>
         <div className="flex flex-col gap-8 md:flex-row">
           <div className="">
             <span className="text-gray-500 mr-4">Language</span>
-            <span className="font-medium">United States | English</span>
+            <span className="font-medium">Switzerland | English</span>
           </div>
           <div className="">
             <span className="text-gray-500 mr-4">Currency</span>
