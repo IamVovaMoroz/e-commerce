@@ -40,8 +40,17 @@ const HomePage = async () => {
     <div className="">
       <Slider />
       <div className="mt-24 px-4 md:px-8 lg:px-16 xl:px-32 2xl:px-64">
-        <Filter/>
-        <h1 className="text-2xl mt-24">Featured Products</h1>
+        <h1 className="text-2xl">T-Shirts for men</h1>
+        <Suspense fallback={<Skeleton />}>
+          <ProductList
+            categoryId={process.env.FEATURED_PRODUCTS_TSHIRTS_CATEGORY_ID!}
+            limit={4}
+          />
+        </Suspense>
+      </div>
+      <div className="mt-24 px-4 md:px-8 lg:px-16 xl:px-32 2xl:px-64">
+        {/* <Filter/> */}
+        <h1 className="text-2xl mt-24">Watches</h1>
         <Suspense fallback={<Skeleton />}>
 
           <ProductList
@@ -58,11 +67,29 @@ const HomePage = async () => {
           <CategoryList />
         </Suspense>
       </div>
-      <div className="mt-24 px-4 md:px-8 lg:px-16 xl:px-32 2xl:px-64">
+      {/* <div className="mt-24 px-4 md:px-8 lg:px-16 xl:px-32 2xl:px-64">
         <h1 className="text-2xl">T-Shirts for men</h1>
         <Suspense fallback={<Skeleton />}>
           <ProductList
-            categoryId={process.env.FEATURED_PRODUCTS_NEW_CATEGORY_ID!}
+            categoryId={process.env.FEATURED_PRODUCTS_TSHIRTS_CATEGORY_ID!}
+            limit={4}
+          />
+        </Suspense>
+      </div> */}
+      <div className="mt-24 px-4 md:px-8 lg:px-16 xl:px-32 2xl:px-64">
+        <h1 className="text-2xl">Sneakers</h1>
+        <Suspense fallback={<Skeleton />}>
+          <ProductList
+            categoryId={process.env.FEATURED_PRODUCTS_SNEAKERS_CATEGORY_ID!}
+            limit={4}
+          />
+        </Suspense>
+      </div>
+      <div className="mt-24 px-4 md:px-8 lg:px-16 xl:px-32 2xl:px-64">
+        <h1 className="text-2xl">Glasses</h1>
+        <Suspense fallback={<Skeleton />}>
+          <ProductList
+            categoryId={process.env.FEATURED_PRODUCTS_GLASSES_CATEGORY_ID!}
             limit={4}
           />
         </Suspense>
